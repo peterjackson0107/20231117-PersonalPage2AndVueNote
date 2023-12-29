@@ -6,13 +6,13 @@ export default {
     //data=function(){}
     return {
       isDarkMode: false, // 初始化為 false，表示暗色模式未啟用
-      total_spend:[],
-      total_income:[],
-      ts:0,
-      ti:0,
-      add_detail:{name: '',type:'收入',money:''},
-      recent_day:7,
-      total:0
+      newDate: '',
+      newDescription: '',
+      newItem: '',
+      newType: '吃飯', // 默认类型
+      newIsCash: false,
+      newAmount: '',
+      expenses: []
     };
   },
   methods: {
@@ -20,9 +20,29 @@ export default {
     toggleDarkMode() {
       this.isDarkMode = !this.isDarkMode; // 切換 isDarkMode 的值
     },
-    add_uitem:function(){
-      this.usually_item.push({name:this.add_detail.name, type:this.add_detail.type})
+    addItem: function() {
+      if (this.newDate && this.newDescription && this.newItem && this.newAmount) {
+        this.expenses.push({
+          date: this.newDate,
+          description: this.newDescription,
+          item: this.newItem,
+          type: this.newType,
+          isCash: this.newIsCash,
+          amount: this.newAmount
+        });
+
+        // 清空输入
+        this.newDate = '';
+        this.newDescription = '';
+        this.newItem = '';
+        this.newType = '吃飯'; // 重新设置默认类型
+        this.newIsCash = false;
+        this.newAmount = '';
+      }
     },
+    removeItem: function(index) {
+      this.expenses.splice(index, 1);
+    }
   },
   mounted(){
     this.setLocation(12)
@@ -73,17 +93,72 @@ export default {
                 <div class="modal-content" :class="{ 'dark-mode': isDarkMode }">
                   <!-- Header -->
                   <div class="modal-header">
+                    <div class="accountList">
+                      <div class="account1">
                     <h1>Expense Tracker</h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                  
                   </div>
-                  
+                    <!-- 输入表单 -->
+                    <div class="account2">
+                      <label for="date">日期：</label>
+                      <input type="date" id="date" v-model="newDate"><br>
+
+                      <label for="description">说明：</label>
+                      <input type="text" id="description" v-model="newDescription"><br>
+
+                      <label for="item">品项：</label>
+                      <input type="text" id="item" v-model="newItem"><br>
+
+                      <label for="type">类型：</label>
+                      <select id="type" v-model="newType">
+                        <option value="吃飯">吃饭</option>
+                        <option value="車錢">车钱</option>
+                        <option value="物品">物品</option>
+                      </select><br>
+
+                      <label for="isCash">是否用现金：</label>
+                      <input type="checkbox" id="isCash" v-model="newIsCash"><br>
+
+                      <label for="amount">金额：</label>
+                      <input type="number" id="amount" v-model="newAmount"><br>
+
+                      <button @click="addItem">添加</button>
+                    </div>
+                    <div class="account3">
+                    <!-- 表格 -->
+                    <table border="1">
+                      <thead>
+                        <tr>
+                          <th>日期</th>
+                          <th>说明</th>
+                          <th>品项</th>
+                          <th>类型</th>
+                          <th>是否用现金</th>
+                          <th>金额</th>
+                          <th>操作</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr v-for="(expense, index) in expenses" :key="index">
+                          <td>{{ expense.date }}</td>
+                          <td>{{ expense.description }}</td>
+                          <td>{{ expense.item }}</td>
+                          <td>{{ expense.type }}</td>
+                          <td>{{ expense.isCash ? '是' : '否' }}</td>
+                          <td>{{ expense.amount }}</td>
+                          <td><button @click="removeItem(index)">删除</button></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
               </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
-  </div>
+    </div>
 </template>
 
 <style scoped lang="scss">

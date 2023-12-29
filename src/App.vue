@@ -58,7 +58,7 @@ document.addEventListener("mousemove", function (e) {
     </div>
 
     <div class="homeBtn">
-      <a href="#"><img src="mori-calliope-hololive (4).gif" alt="" style="width: 100px; height: 100px;"></a>
+      <a href="#"><img src="../src/components/pictures/moriCalliopePortrait.webp" alt="" style="width: 100px; height: 100px;"></a>
     </div>
 
     <button class="btn" type="button" @click="this.menu()">
@@ -111,7 +111,7 @@ document.addEventListener("mousemove", function (e) {
     height: 400vw;
     z-index: 1000;
     background-color: rgba(68, 68, 102, .5);
-    background-image: url("https://media.tenor.com/Uv_G-mhR-poAAAAi/mori-calliope-hololive.gif");
+    background-image: url("../src/components/pictures/moriCalliopeHololive\(4\).gif");
     position: absolute;
     // transition: .3s cubic-bezier(.2, .65, .36, 1);
   }
