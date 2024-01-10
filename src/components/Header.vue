@@ -44,7 +44,9 @@ export default {
   <ul id="myMenu">
     <div class="headerShow">
       <li><a href="#"><RouterLink to="/" class="routerItem" :class="{ cass: this.location === 1 }">Home<small>ホーム</small></RouterLink></a></li>
-      <li><a href="#"><RouterLink to="/VtextAndVmodel" class="routerItem" :class="{ cass: this.location === 2 }">VtextAndVmodel<small>ビー・テクスト・アンド・ビー・モデル</small></RouterLink></a></li>
+      <RouterLink to="/EnglishChild" class="routerItem" :class="{ cass: this.location === 18 }" style="display: none;">EnglishChild</RouterLink>
+      <RouterLink to="/KoreaChild" class="routerItem" :class="{ cass: this.location === 19 }" style="display: none;">KoreaChild</RouterLink>
+      <RouterLink to="/ChineseChild" class="routerItem" :class="{ cass: this.location === 20 }" style="display: none;">ChineseChild</RouterLink><li><a href="#"><RouterLink to="/VtextAndVmodel" class="routerItem" :class="{ cass: this.location === 2 }">VtextAndVmodel<small>ビー・テクスト・アンド・ビー・モデル</small></RouterLink></a></li>
       <li><a href="#"><RouterLink to="/Vfor" class="routerItem" :class="{ cass: this.location === 3 }">VFor<small>ビー・フォー</small></RouterLink></a></li>
       <li><a href="#"><RouterLink to="/VforKeban" class="routerItem" :class="{ cass: this.location === 4 }">VForKeban<small>ビー・フォー・ケバン</small></RouterLink></a></li>
       <li><a href="#"><RouterLink to="/Von" class="routerItem" :class="{ cass: this.location === 5 }">VOn<small>ビー・オン</small></RouterLink></a></li>
@@ -61,9 +63,7 @@ export default {
       <li><a href="#"><RouterLink to="/RouteFam" class="routerItem" :class="{ cass: this.location === 16 }">RouteFam<small>ルート・ファム</small></RouterLink></a></li>
       <li><a href="#"><RouterLink to="/Vslot" class="routerItem" :class="{ cass: this.location === 17 }">Vslot<small>ビー・スロット</small></RouterLink></a></li>
     </div>
-    <RouterLink to="/EnglishChild" class="routerItem" :class="{ cass: this.location === 18 }" style="display: none;">EnglishChild</RouterLink>
-    <RouterLink to="/KoreaChild" class="routerItem" :class="{ cass: this.location === 19 }" style="display: none;">KoreaChild</RouterLink>
-    <RouterLink to="/ChineseChild" class="routerItem" :class="{ cass: this.location === 20 }" style="display: none;">ChineseChild</RouterLink>
+    
   </ul>
   <!-- <span>{{ locationInfo }}</span> -->
 </div>
