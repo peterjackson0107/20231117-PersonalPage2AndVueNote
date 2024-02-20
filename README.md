@@ -1,7 +1,7 @@
 # 2023.11.17 ~ 2023.11.29
 
 ## 網址
-github：https://peterjackson0107.github.io/20231117-PersonalPage2AndVueNote/
+https://peterjackson0107.github.io/20231117-PersonalWeb2AndVueNote/
 
 github 讀取 Vue.js 會空白，所以 Vue.js 的東西都部屬在 netlify
 
