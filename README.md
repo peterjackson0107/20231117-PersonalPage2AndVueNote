@@ -34,6 +34,7 @@ netlify：https://silly-axolotl-d64424.netlify.app/
 ## 想法或目標
 * 用 Vue 做出屬於自己的自我介紹網頁
 
-## 画面
+## 實際畫面
+* 画面
 
 ![image](https://github.com/peterjackson0107/20231117-PersonalPage2AndVueNote/assets/151004314/821ad1cf-2ab6-4886-a570-f07d44a4fb76)
