@@ -11,13 +11,13 @@ netlify：https://silly-axolotl-d64424.netlify.app/
 - HTML
 - CSS
 - SCSS
-- Bootstrap v5.1.1
-- JavaScript
 - node.js
+- JavaScript
 - Vue3
 - Vue.js
 
 ## 輔助技術
+- Bootstrap v5.1.1
 - codepen
 - fontawesome
 - colorhunt
