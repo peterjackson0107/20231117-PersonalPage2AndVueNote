@@ -30,6 +30,7 @@ netlify：https://silly-axolotl-d64424.netlify.app/
 ## 學習歷程進度
 * 開始學習 Vue 框架
 * 學習 Vue 指令
+* 使用 Vue 指令作出個人網站首頁
 
 ## 想法或目標
 * 用 Vue 做出屬於自己的自我介紹網頁
