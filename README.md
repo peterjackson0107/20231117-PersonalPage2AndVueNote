@@ -1,11 +1,13 @@
 # 2023.11.17 ~ 2023.12.08
+* 2023.11.17 ~ 2023.11.29 開始學習 Vue 框架
+* 2023.11.29 ~ 2023.12.08 做出屬於自己的自我介紹網頁
 
 ## 網址
-github：https://peterjackson0107.github.io/20231117-PersonalWeb2AndVueNote/
+* github：https://peterjackson0107.github.io/20231117-PersonalWeb2AndVueNote/
 
-github 讀取 Vue.js 會空白，所以 Vue.js 的東西都部屬在 netlify
+* github 讀取 Vue.js 會空白，所以 Vue.js 的東西都部屬在 netlify
 
-netlify：https://silly-axolotl-d64424.netlify.app/
+* netlify：https://silly-axolotl-d64424.netlify.app/
 
 ## 專案技術
 - HTML
@@ -30,7 +32,7 @@ netlify：https://silly-axolotl-d64424.netlify.app/
 ## 學習歷程進度
 * 開始學習 Vue 框架
 * 學習 Vue 指令
-* 使用 Vue 指令作出個人網站首頁
+* 使用 Vue 指令做自我介紹網頁
 
 ## 想法或目標
 * 用 Vue 做出屬於自己的自我介紹網頁
